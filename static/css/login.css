@@ -1,0 +1,31 @@
+body {
+    background-color: #cfccc9;
+
+}
+a {
+    color: #1b00a8;
+    font-size: 28px;
+}
+a:hover {
+    color: red;
+}
+nav {
+    text-align: center;
+}
+#id {
+    margin-left: 150px;
+    margin-top: 40px;
+}
+#one_div {
+    background-color: #bd9265;
+    border-radius: 25px;
+    padding: 20px;
+    text-align: justify;
+    width: 450px;
+    height: 180px;
+    font-size: 28px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
