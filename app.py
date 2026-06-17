@@ -28,6 +28,10 @@ with app.app_context():
 def home():
     return render_template('home.html')
 
+@app.route('/main')
+def main():
+    return render_template('main.html')
+
 @app.route('/register', methods = ['GET', 'POST'])
 def register():
     if request.method == 'POST':
@@ -43,9 +47,9 @@ def register():
         db.session.add(new_user)
         db.session.commit()
 
-        return redirect(url_for('home.html'))
+        return redirect(url_for('home'))
 
-    return redirect(url_for('register.html'))
+    return render_template('register.html')
 
 @app.route('/login', methods = ['GET', 'POST'])
 def login():
@@ -57,11 +61,11 @@ def login():
         if user and check_password_hash(user.password_hash, password):
             session['user_id'] = user.id
             session['user_name'] = user.username
-            return redirect(url_for('home.html'))
+            return redirect(url_for('main'))
         else:
             return "Неверное имя пользователя или пароль"
 
-    return redirect(url_for('login.html'))
+    return render_template('login.html')
 
 @app.errorhandler(404)
 def page_not_found(error):
