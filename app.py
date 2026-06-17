@@ -2,6 +2,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from flask import Flask
 from flask import render_template
 from flask import request
+from flask import redirect, url_for
 from flask import session
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin
@@ -41,11 +42,10 @@ def register():
         new_user = User(username=username, email = email, password_hash = generate_password_hash(password))
         db.session.add(new_user)
         db.session.commit()
-        session['user_id'] = new_user.id
 
-        return render_template('home.html')
+        return redirect(url_for('home.html'))
 
-    return render_template('register.html')
+    return redirect(url_for('register.html'))
 
 @app.route('/login', methods = ['GET', 'POST'])
 def login():
@@ -56,11 +56,12 @@ def login():
         user = User.query.filter_by(username=username).first()
         if user and check_password_hash(user.password_hash, password):
             session['user_id'] = user.id
-            return render_template('home.html')
+            session['user_name'] = user.username
+            return redirect(url_for('home.html'))
         else:
             return "Неверное имя пользователя или пароль"
 
-    return render_template('login.html')
+    return redirect(url_for('login.html'))
 
 @app.errorhandler(404)
 def page_not_found(error):
