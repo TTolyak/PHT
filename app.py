@@ -60,12 +60,19 @@ def login():
         user = User.query.filter_by(username=username).first()
         if user and check_password_hash(user.password_hash, password):
             session['user_id'] = user.id
-            session['user_name'] = user.username
+            session['username'] = user.username
             return redirect(url_for('main'))
         else:
             return "Неверное имя пользователя или пароль"
 
     return render_template('login.html')
+
+@app.route('/profile/<string:username>', methods = ['GET'])
+def profile(username):
+    user = User.query.filter_by(username=username).first()
+    if not user: return "Пользователь не найден", 404
+
+    return render_template('profile.html', user = user)
 
 @app.errorhandler(404)
 def page_not_found(error):

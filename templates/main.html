@@ -7,7 +7,14 @@
 </head>
 <body>
     <div class="container">
-        <div id="one_div"></div>
+
+        <div id="one_div">
+            <img src="static/images/photo.jpg" alt="Профиль" id= "one_photo">
+            {% if session.get('user_id') %}
+                <a href="/profile/{{ session.get('username') }}" id = "one_a"> Профиль </a>
+            {% endif %}
+        </div>
+
         <div id="two_div"></div>
     </div>
 </body>
