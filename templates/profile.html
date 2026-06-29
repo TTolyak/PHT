@@ -6,6 +6,20 @@
     <title>Profile</title>
 </head>
 <body>
-    <b> Привет, {{ user.username }} !</b>
+    <div id="one_div">
+        <img src="{{ url_for('static', filename='images/photo.jpg') }}" alt="Профиль" id="one_photo">
+
+        <p id="one_text"><b>Имя:</b> {{ user.username }} </p>
+        <p id="two_text"><b>Почта:</b> {{ user.email }} </p>
+        <p id="three_text"><b>Пароль:</b> ******** </p>
+
+        <form method="POST" action="{{ url_for('profile', username=user.username) }}">
+            <button type="submit" name="action" value="save" ><b>Добавить фото</b></button>
+            <button type="submit" name="action" value="delete"><b>Изменить пароль</b></button>
+        </form>
+
+    </div>
+
+
 </body>
 </html>

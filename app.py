@@ -28,9 +28,11 @@ with app.app_context():
 def home():
     return render_template('home.html')
 
+
 @app.route('/main')
 def main():
     return render_template('main.html')
+
 
 @app.route('/register', methods = ['GET', 'POST'])
 def register():
@@ -51,6 +53,7 @@ def register():
 
     return render_template('register.html')
 
+
 @app.route('/login', methods = ['GET', 'POST'])
 def login():
     if request.method == 'POST':
@@ -67,12 +70,15 @@ def login():
 
     return render_template('login.html')
 
+
 @app.route('/profile/<string:username>', methods = ['GET'])
 def profile(username):
     user = User.query.filter_by(username=username).first()
     if not user: return "Пользователь не найден", 404
+    if session.get('user_id') == user.id:
+        return render_template('profile.html', user=user)
+    else: return "Ошибка доступа", 404
 
-    return render_template('profile.html', user = user)
 
 @app.errorhandler(404)
 def page_not_found(error):
