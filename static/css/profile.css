@@ -2,12 +2,38 @@ body {
     background-color: #cfccc9;
 
 }
-button{
+
+a {
+    color: #1b00a8;
+    font-size: 28px;
+}
+a:hover {
+    color: red;
+}
+nav {
+    text-align: center;
+}
+
+#one{
     width: 200px;
     height: 60px;
-    transform: translate(115px, -90px);
+    transform: translate(115px, -120px);
     margin: 0px 50px 0px 0px;
 }
+#two{
+    width: 200px;
+    height: 60px;
+    transform: translate(340px, -180px);
+    margin: 0px 50px 0px 0px;
+}
+#three {
+    width: 150px;
+    height: 40px;
+    transform: translate(255px, -170px);
+    margin: 0px 50px 0px 0px;
+    color: red;
+}
+
 #one_photo {
     height: 200px;
     width: 200px;

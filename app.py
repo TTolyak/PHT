@@ -1,12 +1,9 @@
 from werkzeug.security import generate_password_hash, check_password_hash
-from flask import Flask
-from flask import render_template
-from flask import request
-from flask import redirect, url_for
-from flask import session
+from flask import Flask, render_template, request, redirect, url_for, session
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin
 import secrets
+
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
@@ -78,6 +75,12 @@ def profile(username):
     if session.get('user_id') == user.id:
         return render_template('profile.html', user=user)
     else: return "Ошибка доступа", 404
+
+
+@app.route('/logout')
+def logout():
+    session.pop('user', None)
+    return redirect(url_for('home'))
 
 
 @app.errorhandler(404)

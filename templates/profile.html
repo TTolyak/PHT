@@ -6,6 +6,7 @@
     <title>Profile</title>
 </head>
 <body>
+    <nav><a href="/main">Вернуться назад</a></nav>
     <div id="one_div">
         <img src="{{ url_for('static', filename='images/photo.jpg') }}" alt="Профиль" id="one_photo">
 
@@ -14,10 +15,14 @@
         <p id="three_text"><b>Пароль:</b> ******** </p>
 
         <form method="POST" action="{{ url_for('profile', username=user.username) }}">
-            <button type="submit" name="action" value="save" ><b>Добавить фото</b></button>
-            <button type="submit" name="action" value="delete"><b>Изменить пароль</b></button>
+            <button id="one" type="submit" name="action" value="save" ><b>Добавить фото</b></button>
         </form>
 
+        <button id="two" type="submit" name="action" value="delete"><b>Изменить пароль</b></button>
+
+        <form method="GET" action="{{ url_for('logout') }}">
+            <button id="three" type="submit">Выйти</button>
+        </form>
     </div>
 
 

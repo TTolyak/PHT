@@ -1,5 +1,5 @@
 body {
-    background-color: #cfccc9;
+    background-color: #e2f1d0;
 }
 a {
     color: #1b00a8;
@@ -11,7 +11,7 @@ a:hover {
 }
 #one_div {
     text-align: center;
-    background-color: #bd9265;
+    background-color: #f3c15e;
     border-radius: 25px;
     width: 450px;
     height: 350px;
@@ -22,7 +22,7 @@ a:hover {
 }
 #one_text {
     font-size: 26px;
-    color: #53135e;
+
     padding: 15px 35px;
     text-align: justify;
 }

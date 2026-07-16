@@ -13,8 +13,9 @@ nav {
     text-align: center;
 }
 #id {
-    margin-left: 150px;
-    margin-top: 40px;
+    margin-left: 185px;
+    margin-top: 50px;
+    font-size: 18px;
 }
 #one_div {
     background-color: #bd9265;

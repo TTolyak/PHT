@@ -11,7 +11,7 @@ a:visited {
     color: black;
 }
 a:hover {
-    color: red;
+    color: #a44144;
 }
 
 #one_photo {
@@ -20,9 +20,13 @@ a:hover {
     margin-top: 30px;
     margin-left: 25px;
 }
+#two_photo{
+    height: 180px;
+    width: 400px;
+}
 
 #one_a {
-    font-size: 35px;
+    font-size: 33px;
     margin-left: 60px;
 }
 
@@ -32,11 +36,44 @@ a:hover {
     border-right: 5px solid black;
 
 }
+#two_div{
+    height: 98vh;
+    width: 800px;
 
-#two_div {
+}
+#three_div{
+    height: 180px;
+    width: 400px;
+    border: 5px solid black;
+    border-radius: 5px;
+    transform: translate(200px, 30px);
+}
+#four_div{
+    height: 180px;
+    width: 400px;
+    border: 5px solid black;
+    border-radius: 5px;
+    transform: translate(200px, 50px);
+}
+#P_div {
     height: 100vh;
     width: 400px;
     border-left: 5px solid black;
+}
+
+#one_text{
+    font-size: 30px;
+    text-align: center;
+}
+#two_text{
+    font-size: 22px;
+    text-align: center;
+    transform: translate(0px, 10px);
+}
+#three_text{
+    font-size: 22px;
+    text-align: center;
+    transform: translate(0px, 30px);
 }
 
 .container {
