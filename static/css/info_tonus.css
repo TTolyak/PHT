@@ -1,24 +1,39 @@
 body {
+    height: 2200px;
     background-color: #e2f1d0;
 }
 
-a {
-    color: #1b00a8;
-    font-size: 24px;
+li {
+    font-size: 20px;
+    padding: 5px;
 }
-a:hover {
-    color: red;
+
+p{
+    font-size: 20px;
+}
+
+#one_text{
+    font-size: 26px;
+    text-align: center;
+}
+
+#one_image{
+    width: 50px;
+    height: 50px;
+    transform: translate(20px, 20px);
+    position: fixed;
 }
 
 #one_div{
     background-color: #f3c15e;
-    border: 5px solid black;
+    border: 3px solid black;
     padding: 20px;
     text-align: justify;
     width: 750px;
-    height: 100vh;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    height: 2200px;
+    transform: translate(350px, -35px);
+}
+
+.text {
+    font-size: 20px;
 }

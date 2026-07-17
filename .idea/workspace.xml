@@ -4,18 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c142231-f850-43b2-843f-0f4464aea871" name="Changes" comment="Profile Editing">
-      <change afterPath="$PROJECT_DIR$/static/css/info_tonus.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/info_vision.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/info_tonus.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/info_vision.html" afterDir="false" />
+    <list default="true" id="3c142231-f850-43b2-843f-0f4464aea871" name="Changes" comment="Page Design">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/info_tonus.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/info_tonus.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/info_vision.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/info_vision.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/login.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/profile.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/register.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/register.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/info_tonus.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/info_tonus.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/info_vision.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/info_vision.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +173,15 @@
       <option name="project" value="LOCAL" />
       <updated>1784233299283</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Page Design">
+      <option name="closed" value="true" />
+      <created>1784295037942</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1784295037942</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -192,7 +202,8 @@
     <MESSAGE value="Adding profile (beta)" />
     <MESSAGE value="Profile development" />
     <MESSAGE value="Profile Editing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Profile Editing" />
+    <MESSAGE value="Page Design" />
+    <option name="LAST_COMMIT_MESSAGE" value="Page Design" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
