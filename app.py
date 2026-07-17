@@ -77,6 +77,16 @@ def profile(username):
     else: return "Ошибка доступа", 404
 
 
+@app.route('/info_vision')
+def information_one():
+    return render_template('info_vision.html')
+
+
+@app.route('/info_tonus')
+def information_two():
+    return render_template('info_tonus.html')
+
+
 @app.route('/logout')
 def logout():
     session.pop('user', None)

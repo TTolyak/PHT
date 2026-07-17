@@ -1,5 +1,5 @@
 body {
-    background-color: #cfccc9;
+    background-color: #e2f1d0;
     margin: 0;
     padding: 0;
 }
@@ -21,7 +21,11 @@ a:hover {
     margin-left: 25px;
 }
 #two_photo{
-    height: 180px;
+    height: 230px;
+    width: 400px;
+}
+#three_photo{
+    height: 230px;
     width: 400px;
 }
 
@@ -42,18 +46,18 @@ a:hover {
 
 }
 #three_div{
-    height: 180px;
+    height: 230px;
+    width: 400px;
+    border: 5px solid black;
+    border-radius: 5px;
+    transform: translate(200px, 20px);
+}
+#four_div{
+    height: 230px;
     width: 400px;
     border: 5px solid black;
     border-radius: 5px;
     transform: translate(200px, 30px);
-}
-#four_div{
-    height: 180px;
-    width: 400px;
-    border: 5px solid black;
-    border-radius: 5px;
-    transform: translate(200px, 50px);
 }
 #P_div {
     height: 100vh;
@@ -68,12 +72,12 @@ a:hover {
 #two_text{
     font-size: 22px;
     text-align: center;
-    transform: translate(0px, 10px);
+    transform: translate(0px, 0px);
 }
 #three_text{
     font-size: 22px;
     text-align: center;
-    transform: translate(0px, 30px);
+    transform: translate(0px, 10px);
 }
 
 .container {
