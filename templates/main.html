@@ -11,9 +11,22 @@
         <div id="one_div">
             {% if session.get('user_id') %}
                 <a href="/profile/{{ session.get('username') }}" id = "one_a">
-                    <div id="six_div"><img src="static/images/photo.jpg" alt="Профиль" id= "one_photo"></div>
+                    <div id="six_div">
+                        {% if user.avatar %}
+                            <img src="{{ url_for('static', filename='uploads/'+ user.avatar) }}" alt="Аватар" class="photo">
+                        {% else %}
+                            <img src="{{ url_for('static', filename='images/photo.jpg') }}" alt="Профиль" class="photo">
+                        {% endif %}
+                    </div>
                 </a>
             {% endif %}
+
+            <div id="seven_div">
+                <b><p id="four_text">Выбор тем:</p></b>
+                <p class="p"><a href="">Стандартная</a></p>
+                <p class="p"><a href="">Аква</a></p>
+            </div>
+
         </div>
 
         <div id="two_div">

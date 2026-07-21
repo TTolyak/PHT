@@ -12,6 +12,7 @@ a:hover {
 #one_div {
     text-align: center;
     background-color: #f3c15e;
+    border: 3px solid black;
     border-radius: 25px;
     width: 450px;
     height: 350px;
@@ -25,4 +26,48 @@ a:hover {
 
     padding: 15px 35px;
     text-align: justify;
+}
+
+
+
+.flash-container {
+    max-width: 800px;
+    margin: 10px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.flash {
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.flash-success {
+    background-color: #d4edda;
+    color: #155724;
+    border-left: 5px solid #28a745;
+}
+
+.flash {
+    position: relative;
+    padding: 12px 40px 12px 20px;
+}
+
+.flash-close {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    color: inherit;
+    opacity: 0.6;
+}
+
+.flash-close:hover {
+    opacity: 1;
 }

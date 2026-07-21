@@ -3,28 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/profile.css') }}">
-    <title>Profile</title>
+    <title>Personal Habit Tracker</title>
 </head>
 <body>
     <a href="/main"><img src="{{ url_for('static', filename='images/arrow.png') }}" alt="Вернуться назад" id="one_image"></a>
     <div id="one_div">
-        <img src="{{ url_for('static', filename='images/photo.jpg') }}" alt="Профиль" id="one_photo">
+        <div id="two_div">
+            {% if user.avatar %}
+                <img src="{{ url_for('static', filename='uploads/'+ user.avatar) }}" alt="Аватар" class="photo">
+            {% else %}
+                <img src="{{ url_for('static', filename='images/photo.jpg') }}" alt="Профиль" class="photo">
+            {% endif %}
+        </div>
 
         <p id="one_text"><b>Имя:</b> {{ user.username }} </p>
         <p id="two_text"><b>Почта:</b> {{ user.email }} </p>
         <p id="three_text"><b>Пароль:</b> ******** </p>
 
-        <form method="POST" action="{{ url_for('profile', username=user.username) }}">
-            <button id="one" type="submit" name="action" value="save" ><b>Добавить фото</b></button>
-        </form>
+        <a href="/add_avatar"><button id="one" type="submit"><b>Добавить фото</b></button></a>
 
         <button id="two" type="submit" name="action" value="delete"><b>Изменить пароль</b></button>
 
         <form method="GET" action="{{ url_for('logout') }}">
             <button id="three" type="submit">Выйти</button>
         </form>
+
     </div>
-
-
 </body>
 </html>

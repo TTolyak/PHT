@@ -1,0 +1,33 @@
+body {
+    background-color: #e2f1d0;
+
+}
+
+#one{
+    width: 200px;
+    height: 60px;
+    transform: translate(115px, -120px);
+    margin: 0px 50px 0px 0px;
+}
+
+div{
+    background-color: #f3c15e;
+    border: 3px solid black;
+    border-radius: 25px;
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+input{
+    transform: translate(40px, 190px);
+}
+
+button{
+   transform: translate(40px, 90px);
+   height: 60px;
+   width: 225px;
+}

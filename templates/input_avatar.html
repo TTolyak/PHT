@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/input_avatar.css') }}">
+    <title>Personal Habit Tracker</title>
+</head>
+<body>
+    <div>
+        <form method="POST" action="{{ url_for('add_avatar', username=user.username) }}" enctype="multipart/form-data">
+            <input id="one_input" type="file" name="avatar" accept="image/*" required>
+            <button type="submit"><b>Добавить фото</b></button>
+        </form>
+    </div>
+</body>
+</html>
