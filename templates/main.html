@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     <title>Personal Habit Tracker</title>
 </head>
-<body>
+<body class="theme-{{ theme }}" >
     <div class="container">
 
         <div id="one_div">
@@ -23,8 +23,8 @@
 
             <div id="seven_div">
                 <b><p id="four_text">Выбор тем:</p></b>
-                <p class="p"><a href="">Стандартная</a></p>
-                <p class="p"><a href="">Аква</a></p>
+                <b><p class="p"><a href="{{ url_for('set_theme', theme_name='standard') }}">Стандартная</a></p></b>
+                <b><p class="p"><a href="{{ url_for('set_theme', theme_name='melon') }}">Нежная дыня</a></p></b>
             </div>
 
         </div>

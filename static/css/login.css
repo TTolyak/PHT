@@ -1,7 +1,8 @@
-body {
-    background-color: #e2f1d0;
-
+body{
+     background-color: #e2f1d0;
 }
+
+
 a {
     color: #1b00a8;
     font-size: 28px;
@@ -28,7 +29,6 @@ nav {
     position: fixed;
 }
 
-
 #one_div {
     background-color: #f3c15e;
     border: 3px solid black;
@@ -42,4 +42,12 @@ nav {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+#one_input{
+    width: 290px;
+}
+
+.one {
+    transform: translate(30px, 20px);
 }

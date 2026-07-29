@@ -1,6 +1,5 @@
 body {
-    background-color: #e2f1d0;
-
+     background-color: #e2f1d0;
 }
 
 a {
@@ -41,4 +40,17 @@ nav {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+#one_input{
+    width: 310px;
+}
+
+#two_input{
+    width: 290px;
+}
+
+.one {
+    transform: translate(30px, 5px);
+    padding: 3px
 }

@@ -5,7 +5,8 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/input_avatar.css') }}">
     <title>Personal Habit Tracker</title>
 </head>
-<body>
+<body class="theme-{{ theme }}">
+    <a href="{{url_for('profile', username=user.username)}}"><img src="{{ url_for('static', filename='images/arrow.png') }}" alt="Вернуться назад" id="one_image"></a>
     <div>
         <form method="POST" action="{{ url_for('add_avatar', username=user.username) }}" enctype="multipart/form-data">
             <input id="one_input" type="file" name="avatar" accept="image/*" required>

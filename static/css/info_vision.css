@@ -1,6 +1,21 @@
 body {
-    background-color: #e2f1d0;
     height: 2100px;
+}
+
+body.theme-standard {
+     background-color: #e2f1d0;
+}
+
+body.theme-standard #one_div {
+    background-color: #f3c15e;
+}
+
+body.theme-melon {
+    background-color: #fbffad;
+}
+
+body.theme-melon #one_div {
+    background-color: #b6ecde;
 }
 
 li {
@@ -25,7 +40,6 @@ p{
 }
 
 #one_div{
-    background-color: #f3c15e;
     border: 3px solid black;
     padding: 20px;
     text-align: justify;

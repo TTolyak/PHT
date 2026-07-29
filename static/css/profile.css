@@ -1,11 +1,24 @@
-body {
-    background-color: #e2f1d0;
+body.theme-standard {
+     background-color: #e2f1d0;
+}
+
+body.theme-standard #one_div {
+    background-color: #f3c15e;
+}
+
+body.theme-melon {
+    background-color: #fbffad;
+}
+
+body.theme-melon #one_div {
+    background-color: #b6ecde;
 }
 
 a {
     color: #1b00a8;
     font-size: 28px;
 }
+
 a:hover {
     color: red;
 }
@@ -27,25 +40,20 @@ nav {
     transform: translate(115px, -120px);
     margin: 0px 50px 0px 0px;
 }
+
 #two{
     width: 200px;
     height: 60px;
     transform: translate(100px, -120px);
     margin: 0px 50px 0px 0px;
 }
+
 #three {
     width: 150px;
     height: 40px;
     transform: translate(260px, -110px);
     margin: 0px 50px 0px 0px;
     color: red;
-}
-
-.photo {
-    height: 200px;
-    width: 200px;
-    object-fit: cover; /* Чтобы не шакалилась */
-    object-position: center; /* Чтобы не шакалилась */
 }
 
 #one_image{
@@ -55,18 +63,7 @@ nav {
     position: fixed;
 }
 
-#one_text {
-    transform: translate(300px, -210px);
-}
-#two_text {
-    transform: translate(300px, -210px);
-}
-#three_text {
-    transform: translate(300px, -210px);
-}
-
 #one_div {
-    background-color: #f3c15e;
     border: 3px solid black;
     border-radius: 25px;
     padding: 20px;
@@ -87,4 +84,15 @@ nav {
     width: 200px;
     margin-top: 30px;
     margin-left: 25px;
+}
+
+.text {
+    transform: translate(300px, -210px);
+}
+
+.photo {
+    height: 200px;
+    width: 200px;
+    object-fit: cover; /* Чтобы не шакалилась */
+    object-position: center; /* Чтобы не шакалилась */
 }

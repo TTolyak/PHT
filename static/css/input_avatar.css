@@ -1,6 +1,17 @@
-body {
-    background-color: #e2f1d0;
+body.theme-standard {
+     background-color: #e2f1d0;
+}
 
+body.theme-standard div {
+    background-color: #f3c15e;
+}
+
+body.theme-melon {
+    background-color: #fbffad;
+}
+
+body.theme-melon div {
+    background-color: #b6ecde;
 }
 
 #one{
@@ -11,7 +22,6 @@ body {
 }
 
 div{
-    background-color: #f3c15e;
     border: 3px solid black;
     border-radius: 25px;
     height: 300px;
@@ -30,4 +40,11 @@ button{
    transform: translate(40px, 90px);
    height: 60px;
    width: 225px;
+}
+
+#one_image{
+    width: 50px;
+    height: 50px;
+    transform: translate(20px, 20px);
+    position: fixed;
 }

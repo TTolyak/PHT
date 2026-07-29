@@ -1,9 +1,8 @@
-from werkzeug.security import generate_password_hash, check_password_hash
-from werkzeug.utils import secure_filename
-from flask import Flask, render_template, request, redirect, url_for, session, flash, send_from_directory
+from flask import Flask, render_template, request, redirect, url_for, session, flash, send_from_directory, make_response
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin
-import secrets
+from werkzeug.security import generate_password_hash, check_password_hash
+from werkzeug.utils import secure_filename
 import os
 
 
@@ -13,7 +12,7 @@ app.config['UPLOAD_FOLDER'] = 'static/uploads'
 app.config['MAX_CONTENT_LENGTH'] = 5 * 1024 * 1024
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 
-app.secret_key = secrets.token_hex(32)
+app.secret_key = 'd9f8c7b6a5e4d3c2b1a0f9e8d7c6b5a4d3c2b1a0f9e8d7c6b5a4d3c2b1a0f9e8d7c6'
 
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
 
@@ -30,47 +29,34 @@ with app.app_context():
     db.create_all()
 
 
+def get_current_user():
+    user_id = session.get('user_id')
+    if not user_id:
+        return None
+    return User.query.get(user_id)
+
+
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+
+@app.context_processor
+def inject_theme():
+    theme = request.cookies.get('theme', 'standard')
+    return dict(theme=theme)
+
+
+@app.route('/set-theme/<theme_name>')
+def set_theme(theme_name):
+    response = make_response(redirect(url_for('main')))
+    response.set_cookie('theme', theme_name, max_age= 30 * 24 * 3600, path='/')
+    return response
 
 
 @app.route('/')
 def home():
     return render_template('home.html')
 
-
-@app.route('/main')
-def main():
-    username = session.get('username')
-    user = User.query.filter_by(username=username).first()
-    return render_template('main.html', user = user)
-
-@app.route('/add_avatar', methods = ['GET', 'POST'])
-def add_avatar():
-    username = session.get('username')
-    user = User.query.filter_by(username=username).first()
-    if request.method == 'POST':
-        file = request.files.get('avatar')
-
-        if file and file.filename != '':
-            if not allowed_file(file.filename):
-                return redirect(url_for('profile', username=user.username))
-
-            filename = secure_filename(file.filename)
-
-            import uuid
-            unique_filename = f"{uuid.uuid4().hex}_{filename}"
-
-            file.save(os.path.join(app.config['UPLOAD_FOLDER'], unique_filename))
-
-            user.avatar = unique_filename
-            db.session.commit()
-
-            return redirect(url_for('profile', username=user.username))
-        else:
-            return redirect(url_for('profile', username=user.username))
-
-    return render_template('input_avatar.html', user=user)
 
 @app.route('/register', methods = ['GET', 'POST'])
 def register():
@@ -110,6 +96,16 @@ def login():
     return render_template('login.html')
 
 
+@app.route('/main')
+def main():
+    user = get_current_user()
+    if not user:
+        redirect(url_for('home'))
+    theme = request.cookies.get('theme', 'standard')
+    return render_template('main.html', user = user, theme = theme)
+
+
+
 @app.route('/profile/<string:username>', methods=['GET', 'POST'])
 def profile(username):
     user = User.query.filter_by(username=username).first()
@@ -121,13 +117,74 @@ def profile(username):
     return render_template('profile.html', user=user)
 
 
+@app.route('/add_avatar', methods = ['GET', 'POST'])
+def add_avatar():
+    user = get_current_user()
+    if not user:
+        redirect(url_for('home'))
+
+    if request.method == 'POST':
+        file = request.files.get('avatar')
+
+        if file and file.filename != '':
+            if not allowed_file(file.filename):
+                return redirect(url_for('profile', username=user.username))
+
+            filename = secure_filename(file.filename)
+
+            import uuid
+            unique_filename = f"{uuid.uuid4().hex}_{filename}"
+
+            file.save(os.path.join(app.config['UPLOAD_FOLDER'], unique_filename))
+
+            user.avatar = unique_filename
+            db.session.commit()
+
+            return redirect(url_for('profile', username=user.username))
+        else:
+            return redirect(url_for('profile', username=user.username))
+
+    return render_template('input_avatar.html', user=user)
+
+# Сделать флеш-сообщения и перенаправления на эту же страницу при неверных данных
+@app.route('/change_password', methods = ['GET', 'POST'])
+def change_password():
+    user = get_current_user()
+    if not user:
+        return redirect(url_for('home'))
+
+    if request.method == 'POST':
+        old_password = request.form.get('password_one')
+        new_password = request.form.get('password_two')
+        confirm_password = request.form.get('password_three')
+
+        if not check_password_hash(user.password_hash, old_password):
+            return "Старый пароль неверен", 400
+
+        if new_password != confirm_password:
+            return "Не совпадают", 400
+
+        user.password_hash = generate_password_hash(new_password)
+        db.session.commit()
+
+        return redirect(url_for('profile', username=user.username))
+
+    return render_template('change_password.html', user = user)
+
+
 @app.route('/info_vision')
 def information_one():
+    user = get_current_user()
+    if not user:
+        redirect(url_for('home'))
     return render_template('info_vision.html')
 
 
 @app.route('/info_tonus')
 def information_two():
+    user = get_current_user()
+    if not user:
+        redirect(url_for('home'))
     return render_template('info_tonus.html')
 
 
