@@ -3,20 +3,18 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin
 from werkzeug.security import generate_password_hash, check_password_hash
 from werkzeug.utils import secure_filename
+from config import Config
+from datetime import datetime
 import os
 
 
 app = Flask(__name__)
-
-app.config['UPLOAD_FOLDER'] = 'static/uploads'
-app.config['MAX_CONTENT_LENGTH'] = 5 * 1024 * 1024
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
-
-app.secret_key = 'd9f8c7b6a5e4d3c2b1a0f9e8d7c6b5a4d3c2b1a0f9e8d7c6b5a4d3c2b1a0f9e8d7c6'
+app.config.from_object(Config)
 
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
 
 db = SQLAlchemy(app)
+
 
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key = True)
@@ -24,6 +22,31 @@ class User(db.Model, UserMixin):
     email = db.Column(db.String(120), unique = True, nullable = False)
     password_hash = db.Column(db.String(256), nullable = False)
     avatar = db.Column(db.String(200), nullable=True)
+
+
+class Habit(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(80), unique = True, nullable = False)
+    description = db.Column(db.String(256))
+
+
+class UserHabit(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    habit_id = db.Column(db.Integer, db.ForeignKey('habit.id'), nullable=False)
+
+    started_at = db.Column(db.DateTime, default = datetime.utcnow)
+
+    user = db.relationship('User', backref='habits')
+    habit = db.relationship('Habit', backref='users')
+
+
+class HabitLog(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    date = db.Column(db.Date, nullable = False)
+    status = db.Column(db.Boolean, default = False)
+
 
 with app.app_context():
     db.create_all()
@@ -115,6 +138,30 @@ def profile(username):
     if session.get('user_id') != user.id:
         return "Ошибка доступа", 404
     return render_template('profile.html', user=user)
+
+
+@app.route('/habits', methods = ['GET', 'POST'])
+def habits():
+    user = get_current_user()
+    if not user:
+        redirect(url_for('home'))
+    return render_template('habits.html')
+
+
+@app.route('/notes', methods = ['GET', 'POST'])
+def notes():
+    user = get_current_user()
+    if not user:
+        redirect(url_for('home'))
+    return render_template('notes.html')
+
+
+@app.route('/plans', methods = ['GET', 'POST'])
+def plans():
+    user = get_current_user()
+    if not user:
+        redirect(url_for('home'))
+    return render_template('plans.html')
 
 
 @app.route('/add_avatar', methods = ['GET', 'POST'])

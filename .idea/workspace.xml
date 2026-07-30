@@ -4,26 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c142231-f850-43b2-843f-0f4464aea871" name="Changes" comment="Uploading photos">
-      <change afterPath="$PROJECT_DIR$/static/css/change_password.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/change_password.html" afterDir="false" />
+    <list default="true" id="3c142231-f850-43b2-843f-0f4464aea871" name="Changes" comment="Update">
+      <change afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/habits.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/notes.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/plans.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/habits.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/notes.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/plans.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/info_tonus.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/info_tonus.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/info_vision.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/info_vision.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/input_avatar.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/input_avatar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/login.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/profile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/register.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/register.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/info_tonus.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/info_tonus.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/info_vision.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/info_vision.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/input_avatar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/input_avatar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,8 +31,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTTP Request" />
+        <option value="Python Script" />
         <option value="HTML File" />
       </list>
     </option>
@@ -203,7 +195,15 @@
       <option name="project" value="LOCAL" />
       <updated>1784641354039</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Update">
+      <option name="closed" value="true" />
+      <created>1785317608267</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1785317608267</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -227,7 +227,8 @@
     <MESSAGE value="Page Design" />
     <MESSAGE value="Design" />
     <MESSAGE value="Uploading photos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Uploading photos" />
+    <MESSAGE value="Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

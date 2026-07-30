@@ -1,4 +1,5 @@
 body {
+    font-family: monospace, Helvetica, monospace;
     margin: 0;
     padding: 0;
 }
@@ -8,9 +9,10 @@ body.theme-standard {
      background-color: #e2f1d0;
 }
 
-body.theme-standard #seven_div {
+body.theme-standard #seven_div, .special_div {
     background-color: #f3c15e;
 }
+
 
 body.theme-melon {
     background-color: #fbffad;
@@ -20,6 +22,9 @@ body.theme-melon #seven_div {
     background-color: #b6ecde;
 }
 
+body.theme-melon .special_div {
+    background-color: #b6ecde;
+}
 
 a{
     all: unset;
@@ -35,10 +40,12 @@ a:hover {
     height: 150px;
     width: 150px;
 }
+
 #two_photo{
     height: 230px;
     width: 400px;
 }
+
 #three_photo{
     height: 230px;
     width: 400px;
@@ -55,11 +62,13 @@ a:hover {
     border-right: 5px solid black;
 
 }
+
 #two_div{
     height: 98vh;
     width: 450px;
 
 }
+
 #three_div{
     height: 230px;
     width: 400px;
@@ -67,6 +76,7 @@ a:hover {
     border-radius: 5px;
     transform: translate(20px, 20px);
 }
+
 #four_div{
     height: 230px;
     width: 400px;
@@ -75,6 +85,7 @@ a:hover {
     transform: translate(20px, 30px);
     background-color: #d7a3cd;
 }
+
 #five_div {
     height: 100vh;
     width: 400px;
@@ -89,6 +100,7 @@ a:hover {
     margin-top: 0px;
     margin-left: 45px;
 }
+
 #seven_div{
     border: 5px solid black;
     border-radius: 3px;
@@ -97,24 +109,68 @@ a:hover {
     transform: translate(20px, 330px);
 }
 
+#eight_div {
+    transform: translate(80px, 50px);
+}
+
+#nine_div {
+    transform: translate(80px, 80px);
+}
+
+#ten_div {
+    transform: translate(80px, 110px);
+}
+
+#eleven_div {
+    background-color: #cdd6d3;
+    border: 5px solid black;
+    border-radius: 20px;
+    height: 50px;
+    width: 270px;
+    transform: translate(60px, 230px);
+}
+
 #one_text{
     font-size: 30px;
     text-align: center;
 }
+
 #two_text{
-    font-size: 22px;
+    font-size: 20px;
     text-align: center;
     transform: translate(0px, 0px);
 }
+
 #three_text{
     font-size: 22px;
     text-align: center;
     transform: translate(0px, 10px);
 }
+
 #four_text{
     text-align: center;
     font-size: 26px;
     transform: translate(0px, -10px);
+}
+
+#five_text{
+   transform: translate(55px, -10px);
+   font-size: 30px;
+}
+
+#six_text{
+   transform: translate(12px, -5px);
+   font-size: 26px;
+}
+
+#seven_text{
+   transform: translate(60px, -10px);
+   font-size: 30px;
+}
+
+#eight_text {
+    font-size: 25px;
+    transform: translate(10px, -15px);
 }
 
 .container {
@@ -135,4 +191,11 @@ a:hover {
     text-align: center;
     font-size: 20px;
     transform: translate(0px, -15px);
+}
+
+.special_div {
+    border: 5px solid black;
+    border-radius: 20px;
+    width: 240px;
+    height: 80px;
 }
