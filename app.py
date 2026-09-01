@@ -32,10 +32,8 @@ class Habit(db.Model):
 
 class UserHabit(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
     habit_id = db.Column(db.Integer, db.ForeignKey('habit.id'), nullable=False)
-
     started_at = db.Column(db.DateTime, default = datetime.utcnow)
 
     user = db.relationship('User', backref='habits')
@@ -44,8 +42,11 @@ class UserHabit(db.Model):
 
 class HabitLog(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    date = db.Column(db.Date, nullable = False)
-    status = db.Column(db.Boolean, default = False)
+    user_habit_id = db.Column(db.Integer, db.ForeignKey('user_habit.id'), nullable=False)
+    date = db.Column(db.Date, nullable=False)
+    status = db.Column(db.Boolean, default=False)
+
+    user_habit = db.relationship('UserHabit', backref='logs')
 
 
 with app.app_context():
