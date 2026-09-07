@@ -1,3 +1,7 @@
+body {
+    font-family: monospace;
+}
+
 body.theme-standard {
      background-color: #e2f1d0;
 }
@@ -19,4 +23,37 @@ body.theme-melon #seven_div {
     height: 50px;
     transform: translate(20px, 20px);
     position: fixed;
+}
+
+#one_div {
+    background-color: #cdd6d3;
+    border: 5px solid black;
+    border-radius: 20px;
+    height: 110px;
+    width: 620px;
+    transform: translate(430px, 40px);
+}
+
+#two_div{
+    background-color: #cdd6d3;
+    border: 5px solid black;
+    border-radius: 20px;
+    height: 110px;
+    width: 620px;
+    transform: translate(430px, 200px);
+}
+
+#one_text {
+    text-align: center;
+    width: 600px;
+    font-size: 22px;
+    transform: translate(11px, -7px);
+}
+
+#two_text{
+    text-align: center;
+    color: firebrick;
+    width: 600px;
+    font-size: 25px;
+    transform: translate(11px, 10px);
 }

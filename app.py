@@ -149,22 +149,6 @@ def habits():
     return render_template('habits.html')
 
 
-@app.route('/notes', methods = ['GET', 'POST'])
-def notes():
-    user = get_current_user()
-    if not user:
-        redirect(url_for('home'))
-    return render_template('notes.html')
-
-
-@app.route('/plans', methods = ['GET', 'POST'])
-def plans():
-    user = get_current_user()
-    if not user:
-        redirect(url_for('home'))
-    return render_template('plans.html')
-
-
 @app.route('/add_avatar', methods = ['GET', 'POST'])
 def add_avatar():
     user = get_current_user()
