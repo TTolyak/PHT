@@ -4,18 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c142231-f850-43b2-843f-0f4464aea871" name="Changes" comment="Update">
-      <change afterPath="$PROJECT_DIR$/extensions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/tracking.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/tracking.html" afterDir="false" />
+    <list default="true" id="3c142231-f850-43b2-843f-0f4464aea871" name="Changes" comment="MVP">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/habits.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/habits.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/habits.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/habits.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -242,7 +233,15 @@
       <option name="project" value="LOCAL" />
       <updated>1788779142898</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="MVP">
+      <option name="closed" value="true" />
+      <created>1792140116041</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1792140116041</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,7 +269,8 @@
     <MESSAGE value="Design" />
     <MESSAGE value="Uploading photos" />
     <MESSAGE value="Update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update" />
+    <MESSAGE value="MVP" />
+    <option name="LAST_COMMIT_MESSAGE" value="MVP" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
