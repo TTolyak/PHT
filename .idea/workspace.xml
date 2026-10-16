@@ -5,17 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3c142231-f850-43b2-843f-0f4464aea871" name="Changes" comment="Update">
-      <change beforePath="$PROJECT_DIR$/.idea/PHT.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PHT.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/extensions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/tracking.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/tracking.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/habits.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/habits.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/notes.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/plans.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/habits.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/habits.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/notes.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/plans.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,8 +32,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTTP Request" />
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -49,7 +49,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/TTolyak/PHT.git&quot;,
-    &quot;accountId&quot;: &quot;7d332587-e477-4a04-93ed-66f915a1ce75&quot;
+    &quot;accountId&quot;: &quot;69559738-bee3-42ad-b838-bf2288bc2db9&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -234,7 +234,15 @@
       <option name="project" value="LOCAL" />
       <updated>1788252694187</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Update">
+      <option name="closed" value="true" />
+      <created>1788779142898</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1788779142898</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

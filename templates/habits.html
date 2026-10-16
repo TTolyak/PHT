@@ -13,12 +13,24 @@
             После этого вы сможете просматривать свою активность в разделе "Отслеживание" </p></b>
     </div>
 
-    <div id="two_div">
-        <b>
-            <p id="two_text">
-                Данный блок находится в стадии разработки!
-            </p>
-        </b>
+    <div id="two_div" class="habits-wrapper">
+        <h2 id="two_text">Список привычек</h2>
+
+        <div class="habits-container">
+            {% for habit in habits %}
+                <div class="habit-item">
+                    <b>
+                        <a id="three_text" href="{{ url_for('toggle_habit', habit_id=habit.id) }}">
+                            <br>
+                            {{ habit.name }}
+                        </a>
+                    </b>
+                </div>
+            {% endfor %}
+        </div>
+
+        <b><p id="four_text">Добавить привычку - клик <br> Удалить - повторный клик</p></b>
+
     </div>
 
 </body>

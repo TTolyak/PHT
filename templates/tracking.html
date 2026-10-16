@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/tracking.css') }}">
+</head>
+<body class="theme-{{ theme }}">
+    <a href="/main"><img src="{{ url_for('static', filename='images/arrow.png') }}" alt="Вернуться назад" id="one_image"></a>
+
+    <div id="one_div">
+        <b><p id="one_text">Это ваш раздел отслеживания привычек! Отмечайте привычку выполненной кликом по названию! </p></b>
+    </div>
+
+    <div id="two_div" class="habits-wrapper">
+        <h2 id="two_text">Мои привычки</h2>
+
+        <div class="habits-container">
+            {% for name, count, habit_id in result %}
+                <div class="habit-item">
+                    <b>
+                        <a id="three_text" href="{{ url_for('add_log', habit_id=habit_id) }}">
+                            <br>
+                            {{ name }} - {{ count }}
+                        </a>
+                    </b>
+                </div>
+            {% endfor %}
+        </div>
+
+
+
+    </div>
+</body>
+</html>

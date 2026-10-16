@@ -3,6 +3,7 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/.venv" />
+      <excludeFolder url="file://$MODULE_DIR$/static/uploads" />
     </content>
     <orderEntry type="jdk" jdkName="~\AppData\Local\Programs\Python\Python312\python.exe" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
