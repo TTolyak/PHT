@@ -34,6 +34,7 @@ Flask-Migrate (миграции)
 HTML/CSS/JS
 
 🚀 Запуск:
+
 pip install -r requirements.txt
 
 flask db upgrade
